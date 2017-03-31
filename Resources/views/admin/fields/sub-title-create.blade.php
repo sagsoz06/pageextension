@@ -1,0 +1,1 @@
+{!! Form::i18nInput("sub_title", trans('pageextension::pageextensions.form.sub_title'), $errors, $lang) !!}
