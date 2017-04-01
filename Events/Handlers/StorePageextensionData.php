@@ -1,19 +1,19 @@
-<?php  namespace Modules\PageExtension\Events\Handlers;
+<?php  namespace Modules\Pageextension\Events\Handlers;
 
 
 use Modules\Page\Events\PageWasCreated;
 use Modules\Page\Events\PageWasDeleted;
 use Modules\Page\Events\PageWasUpdated;
-use Modules\PageExtension\Repositories\PageExtensionRepository;
+use Modules\Pageextension\Repositories\PageextensionRepository;
 
-class StorePageExtensionData
+class StorePageextensionData
 {
     /**
-     * @var PageExtensionRepository
+     * @var PageextensionRepository
      */
     private $pageExtensionRepository;
 
-    public function __construct(PageExtensionRepository $pageExtensionRepository)
+    public function __construct(PageextensionRepository $pageExtensionRepository)
     {
 
         $this->pageExtensionRepository = $pageExtensionRepository;
@@ -28,7 +28,7 @@ class StorePageExtensionData
         try
         {
             if(get_class($event)  === PageWasCreated::class) {
-                return $this->createPageExtension($event->pageId, $event->data);
+                return $this->createPageextension($event->pageId, $event->data);
             }
             if(get_class($event) === PageWasDeleted::class) {
                 if($pageExtension = $this->pageExtensionRepository->findForPage($event->page->id)) {
@@ -41,7 +41,7 @@ class StorePageExtensionData
             if($pageExtension) {
                 return $this->pageExtensionRepository->update($pageExtension, $event->data);
             }
-            return $this->createPageExtension($event->pageId, $event->data);
+            return $this->createPageextension($event->pageId, $event->data);
         }
         catch (\Exception $exception)
         {
@@ -49,7 +49,7 @@ class StorePageExtensionData
         }
     }
 
-    private function createPageExtension($pageId, $data)
+    private function createPageextension($pageId, $data)
     {
         $data['page_id'] = $pageId;
         return  $this->pageExtensionRepository->create($data);

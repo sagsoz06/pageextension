@@ -1,10 +1,10 @@
-<?php namespace Modules\PageExtension\Presenters;
+<?php namespace Modules\Pageextension\Presenters;
 
 use Embed\Embed;
 use Embed\Utils;
 use Laracasts\Presenter\Presenter;
 
-class PageExtensionPresenter extends Presenter
+class PageextensionPresenter extends Presenter
 {
     public function video($width, $height)
     {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\PageExtension\Repositories;
+namespace Modules\Pageextension\Repositories;
 
 use Modules\Core\Repositories\BaseRepository;
 
-interface PageExtensionRepository extends BaseRepository
+interface PageextensionRepository extends BaseRepository
 {
     public function findForPage($pageId);
 }

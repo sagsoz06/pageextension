@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\PageExtension\Entities;
+namespace Modules\Pageextension\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PageExtensionTranslation extends Model
+class PageextensionTranslation extends Model
 {
     public $timestamps = false;
     protected $fillable = ['sub_title'];

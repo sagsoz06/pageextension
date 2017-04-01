@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePageExtensionPageExtensionsTable extends Migration
+class CreatePageextensionPageextensionsTable extends Migration
 {
     /**
      * Run the migrations.

@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\PageExtension\Entities;
+namespace Modules\Pageextension\Entities;
 
 use Dimsav\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Laracasts\Presenter\PresentableTrait;
-use Modules\PageExtension\Presenters\PageExtensionPresenter;
+use Modules\Pageextension\Presenters\PageextensionPresenter;
 
-class PageExtension extends Model
+class Pageextension extends Model
 {
     use Translatable, PresentableTrait;
 
@@ -15,5 +15,5 @@ class PageExtension extends Model
     public $translatedAttributes = ['sub_title'];
     protected $fillable = ['page_id', 'sub_title', 'video'];
 
-    public $presenter = PageExtensionPresenter::class;
+    public $presenter = PageextensionPresenter::class;
 }

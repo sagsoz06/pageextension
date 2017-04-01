@@ -1,20 +1,20 @@
-<?php namespace Modules\PageExtension\Composers;
+<?php namespace Modules\Pageextension\Composers;
 
 
 use Illuminate\Contracts\View\View;
-use Modules\PageExtension\Repositories\PageExtensionRepository;
+use Modules\Pageextension\Repositories\PageextensionRepository;
 
-class PageExtensionComposer
+class PageextensionComposer
 {
     /**
-     * @var PageExtensionRepository
+     * @var PageextensionRepository
      */
     private $pageExtensionRepository;
 
     /**
-     * PageExtensionComposer constructor.
+     * PageextensionComposer constructor.
      */
-    public function __construct(PageExtensionRepository $pageExtensionRepository)
+    public function __construct(PageextensionRepository $pageExtensionRepository)
     {
         $this->pageExtensionRepository = $pageExtensionRepository;
     }

@@ -1,13 +1,13 @@
 <?php
 
-namespace Modules\PageExtension\Repositories\Cache;
+namespace Modules\Pageextension\Repositories\Cache;
 
-use Modules\PageExtension\Repositories\PageExtensionRepository;
+use Modules\Pageextension\Repositories\PageextensionRepository;
 use Modules\Core\Repositories\Cache\BaseCacheDecorator;
 
-class CachePageExtensionDecorator extends BaseCacheDecorator implements PageExtensionRepository
+class CachePageextensionDecorator extends BaseCacheDecorator implements PageextensionRepository
 {
-    public function __construct(PageExtensionRepository $pageextension)
+    public function __construct(PageextensionRepository $pageextension)
     {
         parent::__construct();
         $this->entityName = 'pageextension.pageextensions';

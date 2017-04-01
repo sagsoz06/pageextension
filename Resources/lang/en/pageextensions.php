@@ -6,7 +6,7 @@ return [
     'edit resource' => 'Edit pageextensions',
     'destroy resource' => 'Destroy pageextensions',
     'title' => [
-        'pageextensions' => 'PageExtension',
+        'pageextensions' => 'Pageextension',
         'create pageextension' => 'Create a pageextension',
         'edit pageextension' => 'Edit a pageextension',
     ],

@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\PageExtension\Providers;
+namespace Modules\Pageextension\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Modules\Core\Traits\CanPublishConfiguration;
-use Modules\PageExtension\Composers\PageExtensionComposer;
+use Modules\Pageextension\Composers\PageextensionComposer;
 
-class PageExtensionServiceProvider extends ServiceProvider
+class PageextensionServiceProvider extends ServiceProvider
 {
     use CanPublishConfiguration;
     /**
@@ -25,7 +25,7 @@ class PageExtensionServiceProvider extends ServiceProvider
     {
         $this->registerBindings();
 
-        view()->composer('page::admin.edit', PageExtensionComposer::class);
+        view()->composer('page::admin.edit', PageextensionComposer::class);
     }
 
     public function boot()
@@ -46,15 +46,15 @@ class PageExtensionServiceProvider extends ServiceProvider
     private function registerBindings()
     {
         $this->app->bind(
-            'Modules\PageExtension\Repositories\PageExtensionRepository',
+            'Modules\Pageextension\Repositories\PageextensionRepository',
             function () {
-                $repository = new \Modules\PageExtension\Repositories\Eloquent\EloquentPageExtensionRepository(new \Modules\PageExtension\Entities\PageExtension());
+                $repository = new \Modules\Pageextension\Repositories\Eloquent\EloquentPageextensionRepository(new \Modules\Pageextension\Entities\Pageextension());
 
                 if (! config('app.cache')) {
                     return $repository;
                 }
 
-                return new \Modules\PageExtension\Repositories\Cache\CachePageExtensionDecorator($repository);
+                return new \Modules\Pageextension\Repositories\Cache\CachePageextensionDecorator($repository);
             }
         );
 // add bindings

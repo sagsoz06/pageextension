@@ -1,5 +1,5 @@
 {
-    "name": "PageExtension",
+    "name": "Pageextension",
     "alias": "pageextension",
     "description": "",
     "version": "1.0.0",
@@ -7,9 +7,9 @@
     "active": 1,
     "order": 5,
     "providers": [
-        "Modules\\PageExtension\\Providers\\PageExtensionServiceProvider",
-        "Modules\\PageExtension\\Providers\\RouteServiceProvider",
-        "Modules\\PageExtension\\Providers\\EventServiceProvider"
+        "Modules\\Pageextension\\Providers\\PageextensionServiceProvider",
+        "Modules\\Pageextension\\Providers\\RouteServiceProvider",
+        "Modules\\Pageextension\\Providers\\EventServiceProvider"
     ],
     "aliases": [],
     "files": []

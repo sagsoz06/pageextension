@@ -1,21 +1,21 @@
 <?php
 
-namespace Modules\PageExtension\Http\Controllers\Admin;
+namespace Modules\Pageextension\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Modules\PageExtension\Entities\PageExtension;
-use Modules\PageExtension\Repositories\PageExtensionRepository;
+use Modules\Pageextension\Entities\Pageextension;
+use Modules\Pageextension\Repositories\PageextensionRepository;
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 
-class PageExtensionController extends AdminBaseController
+class PageextensionController extends AdminBaseController
 {
     /**
-     * @var PageExtensionRepository
+     * @var PageextensionRepository
      */
     private $pageextension;
 
-    public function __construct(PageExtensionRepository $pageextension)
+    public function __construct(PageextensionRepository $pageextension)
     {
         parent::__construct();
 
@@ -61,10 +61,10 @@ class PageExtensionController extends AdminBaseController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  PageExtension $pageextension
+     * @param  Pageextension $pageextension
      * @return Response
      */
-    public function edit(PageExtension $pageextension)
+    public function edit(Pageextension $pageextension)
     {
         return view('pageextension::admin.pageextensions.edit', compact('pageextension'));
     }
@@ -72,11 +72,11 @@ class PageExtensionController extends AdminBaseController
     /**
      * Update the specified resource in storage.
      *
-     * @param  PageExtension $pageextension
+     * @param  Pageextension $pageextension
      * @param  Request $request
      * @return Response
      */
-    public function update(PageExtension $pageextension, Request $request)
+    public function update(Pageextension $pageextension, Request $request)
     {
         $this->pageextension->update($pageextension, $request->all());
 
@@ -87,10 +87,10 @@ class PageExtensionController extends AdminBaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  PageExtension $pageextension
+     * @param  Pageextension $pageextension
      * @return Response
      */
-    public function destroy(PageExtension $pageextension)
+    public function destroy(Pageextension $pageextension)
     {
         $this->pageextension->destroy($pageextension);
 

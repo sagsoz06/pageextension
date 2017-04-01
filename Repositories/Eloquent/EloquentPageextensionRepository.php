@@ -1,11 +1,11 @@
 <?php
 
-namespace Modules\PageExtension\Repositories\Eloquent;
+namespace Modules\Pageextension\Repositories\Eloquent;
 
-use Modules\PageExtension\Repositories\PageExtensionRepository;
+use Modules\Pageextension\Repositories\PageextensionRepository;
 use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
 
-class EloquentPageExtensionRepository extends EloquentBaseRepository implements PageExtensionRepository
+class EloquentPageextensionRepository extends EloquentBaseRepository implements PageextensionRepository
 {
     public function findForPage($pageId)
     {
