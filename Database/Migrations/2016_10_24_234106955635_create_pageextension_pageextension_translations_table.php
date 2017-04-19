@@ -17,12 +17,12 @@ class CreatePageextensionPageextensionTranslationsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             // Your translatable fields
-            $table->string('sub_title');
+            $table->string('sub_title')->nullable();
 
-            $table->integer('page_extension_id')->unsigned();
+            $table->integer('pageextension_id')->unsigned();
             $table->string('locale')->index();
-            $table->unique(['page_extension_id', 'locale']);
-            $table->foreign('page_extension_id')->references('id')->on('page__extensions')->onDelete('cascade');
+            $table->unique(['pageextension_id', 'locale']);
+            $table->foreign('pageextension_id')->references('id')->on('page__extensions')->onDelete('cascade');
         });
         Schema::enableForeignKeyConstraints();
     }
