@@ -3,12 +3,15 @@
 namespace Modules\Pageextension\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Modules\Core\Events\BuildingSidebar;
+use Modules\Core\Traits\CanGetSidebarClassForModule;
 use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Pageextension\Composers\PageextensionComposer;
+use Modules\Pageextension\Events\Handlers\RegisterPageExtensionSidebar;
 
 class PageextensionServiceProvider extends ServiceProvider
 {
-    use CanPublishConfiguration;
+    use CanPublishConfiguration, CanGetSidebarClassForModule;
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -26,6 +29,11 @@ class PageextensionServiceProvider extends ServiceProvider
         $this->registerBindings();
 
         view()->composer('page::admin.edit', PageextensionComposer::class);
+
+        $this->app['events']->listen(
+            BuildingSidebar::class,
+            $this->getSidebarClassForModule('pageextension', RegisterPageExtensionSidebar::class)
+        );
     }
 
     public function boot()
