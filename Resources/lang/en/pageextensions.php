@@ -17,7 +17,8 @@ return [
     ],
     'form' => [
         'sub_title' => 'Sub Title',
-        'video' => 'Video'
+        'video' => 'Video',
+        'icon' => 'Icon'
     ],
     'messages' => [
     ],

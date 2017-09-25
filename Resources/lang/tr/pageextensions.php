@@ -1,26 +1,27 @@
 <?php
 
 return [
-    'list resource' => 'List pageextensions',
-    'create resource' => 'Create pageextensions',
-    'edit resource' => 'Edit pageextensions',
-    'destroy resource' => 'Destroy pageextensions',
-    'title' => [
-        'pageextensions' => 'Pageextension',
-        'create pageextension' => 'Create a pageextension',
-        'edit pageextension' => 'Edit a pageextension',
+    'list resource'    => 'Sayfa Eki Listele',
+    'create resource'  => 'Sayfa Eki Ekle',
+    'edit resource'    => 'Sayfa Eki Düzenle',
+    'destroy resource' => 'Sayfa Eki Sil',
+    'title'            => [
+        'pageextensions'       => 'Sayfa Eki',
+        'create pageextension' => 'Sayfa Eki Ekle',
+        'edit pageextension'   => 'Sayfa Eki Düzenle',
     ],
-    'button' => [
-        'create pageextension' => 'Create a pageextension',
+    'button'           => [
+        'create pageextension' => 'Sayfa Eki Ekle',
     ],
-    'table' => [
+    'table'            => [
     ],
-    'form' => [
+    'form'             => [
         'sub_title' => 'Alt Başlık',
-        'video' => 'Video'
+        'video'     => 'Video',
+        'icon'      => 'İkon'
     ],
-    'messages' => [
+    'messages'         => [
     ],
-    'validation' => [
+    'validation'       => [
     ],
 ];
